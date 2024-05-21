@@ -1,1 +1,1 @@
-# Potatoe_Disease_Classifier-Full-Stack-
+# Potatoe_Disease_Classifier-Full-Stack
