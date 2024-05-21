@@ -1,0 +1,159 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+}
+svg {
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    display: block; /* Make the SVG a block element */
+}
+.container {
+    position: relative;
+    width: 100%; /* Ensures the container spans the full width of its parent */
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+.upload-container {
+    position: absolute;
+    bottom: 35%; /* Adjust this value to move up to the brown area */
+    left: 30%; /* Center the upload feature horizontally */
+    transform: translateX(-50%); /* Offset the upload feature by half its width to truly center it */
+    width: auto; /* Let the content define the width */
+    max-width: 90%; /* Prevent it from getting too wide, adjust as necessary */
+    background-color: #fff; /* Set the background color to white or another fitting color */
+    border-radius: 25px; /* Curved edges */
+    padding: 20px 30px; /* Padding inside the container */
+    box-sizing: border-box; /* Include padding in width calculations */
+    display: flex; /* Flexbox layout for internal elements */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out the internal elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    z-index: 1; /* Ensure the upload container is above other elements */
+}
+
+.upload-instructions {
+    font-size: 0.9em;
+    color: #666;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #f0f0f0;
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.upload-button {
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-image: url('Assets/Component Button.png'); /* The path to your button image */
+    background-size: cover; /* Cover ensures the image covers the button area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    border: none; /* Removes the border if not needed */
+    text-indent: -9999px; /* Hides the default button text */
+    display: inline-block; /* Allows you to set width and height */
+    width: 95px; /* The width of your image */
+    height: 30px; /* The height of your image */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+#predictionResult {
+    position: absolute;
+    top:60px; /* Adjust this value to move the result further down */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Style adjustments for smaller screens */
+@media (max-width: 600px) {
+    .upload-container {
+        flex-direction: column;
+    }
+
+    .custom-file-upload, .upload-button {
+        margin: 5px 0;
+    }
+}
+
+.result-popup {
+    position: fixed;
+    top: 93%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px; /* Reduce padding to make the box smaller */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    width: 200px; /* Reduce width to make the box smaller */
+    height: 95px; /* Set height as needed */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+.popup-content button {
+    margin-top: 10px; /* Adjust margin to reduce gap */
+}
+
+
+
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+

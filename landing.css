@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Apply styles to PNG images */
+img[src$=".png"] {
+    width: 100vw; /* 100% of viewport width */
+    height: auto; /* Adjust height automatically */
+    display: block; /* Make the image a block element */
+    position: absolute;
+    top: 0; /* Align top of the image to the top of the viewport */
+    left: 0; /* Align left of the image to the left of the viewport */
+}
+
+.container {
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    text-align: center; /* Center align the inline elements like the button */
+}
+
+.text-block {
+    /* Position your text block here */
+    /* You might need to adjust the padding-top to position your text */
+    padding-top: 50vh; /* Example value that centers the text vertically */
+}
+
+.button-link {
+    position: absolute;
+    bottom: 120px; /* Adjust as needed to place the button below the text block */
+    left: 42%;
+    transform: translateX(-50%); /* This will center the button */
+    width: auto; /* Let the button size according to its content */
+}
+
+/* This will ensure the button has the proper size */
+.button-link img {
+    max-width: 200px; /* Example max-width, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  

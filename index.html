@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leaf Guard</title>
+<link rel="icon" type="image/x-icon" href="Assets/logo.ico">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Assets/Landingpage.svg" alt="Landing Page Image" class="responsive-img">
+        <div class="upload-container">
+            <div class="upload-instructions">
+                Please upload an image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <input type="file" id="imageInput" name="file-upload" accept="image/*">
+            <label id="customButton" for="file-upload" class="custom-file-upload">
+                Choose File
+            </label>
+            <button onclick="uploadAndPredict()" class="upload-button">
+                Upload
+            </button>
+            <div id="predictionResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
