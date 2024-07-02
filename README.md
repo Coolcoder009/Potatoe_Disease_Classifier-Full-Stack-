@@ -2,6 +2,8 @@
 
 Leaf Guard is a project designed to classify potato diseases from images using a Convolutional Neural Network (CNN) model. It provides an intuitive web interface where users can upload potato leaf images for disease prediction.
 
+![UI Path](https://github.com/Coolcoder009/Potatoe_Disease_Classifier-Full-Stack/blob/main/Assets/Screenshot%202024-04-05%20173321.jpg?raw=true)
+
 ## Installation
 
 1. Clone the repository 
